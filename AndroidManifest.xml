@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.pasdam.universalsearch.wikipedia"
+	android:versionCode="1" android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="4" />
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+	<application android:label="@string/APP_NAME" android:icon="@drawable/icon">
+
+		<service android:exported="true" android:name="Wikipedia">
+			<intent-filter>
+				<action android:name="universalSearch.intent.action.PICK_PLUGIN" />
+				<category android:name="universalSearch.intent.category.Wikipedia" />
+			</intent-filter>
+		</service>
+		<activity android:name="Preferences" android:theme="@android:style/Theme.Dialog"></activity>
+
+
+	</application>
+</manifest>
